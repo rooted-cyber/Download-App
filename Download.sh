@@ -1,4 +1,6 @@
 imp () {
+	li="printf"
+	bulu="\033[94m"
 	rang="toilet -f term -F gay"
 	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
 $li "$bulu Press enter to home\n"
@@ -10,6 +12,77 @@ ex () {
 	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
 exit 0
 }
+
+hotstar () {
+	
+	lal="\033[91m"
+bulu="\033[94m"
+pila="\033[93m"
+hara="\033[92m"
+ajib="\033[96m"
+pta="\033[95m"
+im="figlet"
+li="printf"
+st="$bulu[+]"
+sp="echo"
+ra="toilet -f term -F gay"
+clear
+$im Hotstar | $ra
+$sp
+$li "$st $pila Checking Hotstar.....\n"
+cd /sdcard/Download-App
+if [ -e Hotstar.apk ];then
+sleep 1
+$li "\n $hara Already download \n\n"
+sleep 1
+else
+sleep 2
+$li "\n $lal [×] Not found Hotstar\n\n"
+sleep 1
+$li "$st $hara Downloading Hotstar....\n\n"
+sleep 1
+$li "$st Please wait downloading Hotstar......\n"
+cd ~/Download-App
+wget https://github.com/rooted-cyber/upload-apk/raw/master/Hotstar.apk
+cp -f Hotstar.apk /sdcard/Download-App
+#cp -f Microg.apk /sdcard/Download-App
+$li "\n\n $hara [√] $pila Download successfull\n\n"
+sleep 1
+$li "$st$pila Checking in sdcard.....\n\n"
+cd /sdcard/Download-App
+sleep 1
+ls
+fi
+cd /sdcard/Download-App
+if [ -e Hotstar.apk ];then
+sleep 1
+$li "$st $hara Now Installing Hotstar.apk\n\n"
+sleep 1
+else
+sleep 1
+$li "\n\n$lal [×] Not Found Hotstar , redownload Hotstar.apk\n\n"
+imp
+fi
+$li "$st $pila Checking root.....\n\n"
+su -c cd /dev/block > /dev/null 2>&1
+if [ -e bootdevice ];then
+sleep 1
+$li "$hara [√]  Your phone root\n\n"
+$li "$st $hara Now installing Hotstar.apk\n\n"
+cd /sdcard/Download-App
+su -c pm install Hotstar.apk
+$li "$hara [√]  Successfully installed"
+else
+sleep 1
+$li "$lal [×] sorry, your phone is not root\n\n"
+fi
+sleep 1
+imp
+$li "\n\n$bulu Press enter to home\n"
+read
+menu
+}
+
 hike () {
 	
 	lal="\033[91m"
@@ -583,6 +656,18 @@ $li "\n\n$bulu Press enter to home\n"
 read
 menu
 }
+cd $PREFIX/bin
+if [ -e Download ];then
+echo
+else
+printf "\n\n \033[92m Shortcut command added....\n"
+echo "#!/data/data/com.termux/files/usr/bin/sh" >> $PREFIX/bin/Download
+echo "cd ~/Download-App" >> $PREFIX/bin/Download
+echo "bash Download.sh" >> $PREFIX/bin/Download
+clear
+printf "\n\n Now you can use this command :- Download\n"
+read
+fi
 
 	cd $PREFIX/bin
 if [ -e figlet ];then
@@ -655,7 +740,8 @@ $li "	$lal [ 1 ] $pila Mixplore 6.42 4
 	$lal [ 6 ] $pila Mx player pro 1.14.5
 	$lal [ 7 ] $pila Termux Styling 0.25
 	$lal [ 8 ] $pila Hike Vk 4.1.0
-	$lal [ 9 ] $pila Exit
+	$lal [ 9 ] $pila Hotstar premium
+	$lal [ 10 ] $pila Exit
 	
 $st $ajib Select >> "
 	read a
@@ -668,7 +754,8 @@ $st $ajib Select >> "
 	6)mx ;;
 	7)style ;;
 	8)hike ;;
-	9)ex ;;
+	9)hotstar ;;
+	10)ex ;;
 	*)bash Download.sh ;;
 	esac
 	}
