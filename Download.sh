@@ -3,6 +3,8 @@ imp () {
 	bulu="\033[94m"
 	rang="toilet -f term -F gay"
 	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
+	toilet -f mono12 -F metal Thanks
+	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
 $li "$bulu Press enter to home\n"
 read
 bash Download.sh
@@ -10,7 +12,79 @@ bash Download.sh
 ex () {
 	rang="toilet -f term -F gay"
 	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
-exit 0
+	toilet -f mono12 -F metal Thanks
+	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
+	exit
+	}
+	
+	Turbo () {
+	
+	lal="\033[91m"
+bulu="\033[94m"
+pila="\033[93m"
+hara="\033[92m"
+ajib="\033[96m"
+pta="\033[95m"
+im="figlet"
+li="printf"
+st="$bulu[+]"
+sp="echo"
+ra="toilet -f term -F gay"
+clear
+$im Turbo | $ra
+$sp
+$li "$st $pila Checking Turbo.....\n"
+cd /sdcard/Download-App
+if [ -e Turbo.apk ];then
+sleep 1
+$li "\n $hara Already download \n\n"
+sleep 1
+else
+sleep 2
+$li "\n $lal [×] Not found Turbo\n\n"
+sleep 1
+$li "$st $hara Downloading Turbo....\n\n"
+sleep 1
+$li "$st Please wait downloading Turbo......\n"
+cd ~/Download-App
+wget https://github.com/rooted-cyber/upload-apk/raw/master/Turbo.apk
+cp -f Turbo.apk /sdcard/Download-App
+#cp -f Microg.apk /sdcard/Download-App
+$li "\n\n $hara [√] $pila Download successfull\n\n"
+sleep 1
+$li "$st$pila Checking in sdcard.....\n\n"
+cd /sdcard/Download-App
+sleep 1
+ls
+fi
+cd /sdcard/Download-App
+if [ -e Turbo.apk ];then
+sleep 1
+$li "$st $hara Now Installing Turbo.apk\n\n"
+sleep 1
+else
+sleep 1
+$li "\n\n$lal [×] Not Found Turbo , redownload Turbo.apk\n\n"
+imp
+fi
+$li "$st $pila Checking root.....\n\n"
+su -c cd /dev/block > /dev/null 2>&1
+if [ -e bootdevice ];then
+sleep 1
+$li "$hara [√]  Your phone root\n\n"
+$li "$st $hara Now installing Turbo.apk\n\n"
+cd /sdcard/Download-App
+su -c pm install Turbo.apk
+$li "$hara [√]  Successfully installed"
+else
+sleep 1
+$li "$lal [×] sorry, your phone is not root\n\n"
+fi
+sleep 1
+imp
+$li "\n\n$bulu Press enter to home\n"
+read
+menu
 }
 
 hotstar () {
@@ -741,7 +815,8 @@ $li "	$lal [ 1 ] $pila Mixplore 6.42 4
 	$lal [ 7 ] $pila Termux Styling 0.25
 	$lal [ 8 ] $pila Hike Vk 4.1.0
 	$lal [ 9 ] $pila Hotstar premium
-	$lal [ 10 ] $pila Exit
+	$lal [ 10 ]$pila Turbo ( sms bomber )
+	$lal [ 11 ]$pila Exit
 	
 $st $ajib Select >> "
 	read a
@@ -755,7 +830,8 @@ $st $ajib Select >> "
 	7)style ;;
 	8)hike ;;
 	9)hotstar ;;
-	10)ex ;;
+	10)Turbo ;;
+	11)ex ;;
 	*)bash Download.sh ;;
 	esac
 	}

@@ -1,4 +1,11 @@
 # Installation in termux
+<img src="https://github.com/rooted-cyber/image-upload/raw/master/Download-App1.png" style="width:300px;height:400px;">
+
+<img src="https://github.com/rooted-cyber/image-upload/raw/master/Download-App3.png" style="width:300px;height:400px;">
+
+
+<img src="https://github.com/rooted-cyber/image-upload/raw/master/Download-App2.png" style="width:300px;height:400px;">
+
 
 <pre> $ apt update
  $ apt upgrade
