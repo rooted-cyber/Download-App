@@ -16,6 +16,34 @@ ex () {
 	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
 	exit
 	}
+	upd () {
+		cd ~
+		rm -Rf Download-App
+		cd $PREFIX/bin
+		rm -f Download
+		cd $HOME
+		clear
+		git clone https://github.com/rooted-cyber/Download-App
+		cd Download-App
+		bash Download.sh
+		}
+	auto () {
+		clear
+		toilet -f mono12 -F metal UPDATE
+		echo "======================================================="|lolcat
+		echo -e "		\033[91m Your Tool Older version !!"
+		echo "======================================================="|lolcat
+		echo
+		cowsay -f moose UPDATE|lolcat
+		echo
+		echo -e -n "\033[92m	[√]\033[96m Update Download-App Tool ?\033[93m (\033[97mY/N\033[93m)  "
+		read f
+		case $f in
+		y|Y)upd ;;
+		n|N)ex ;;
+		*)auto ;;
+		esac
+		}
 	
 	Turbo () {
 	
@@ -117,7 +145,8 @@ $li "$st $hara Downloading Hotstar....\n\n"
 sleep 1
 $li "$st Please wait downloading Hotstar......\n"
 cd ~/Download-App
-wget https://github.com/rooted-cyber/upload-apk/raw/master/Hotstar.apk
+wget https://github.com/rooted-cyber/upload-apk/raw/master/Hotstar2.apk
+mv Hotstar2.apk Hotstar.apk
 cp -f Hotstar.apk /sdcard/Download-App
 #cp -f Microg.apk /sdcard/Download-App
 $li "\n\n $hara [√] $pila Download successfull\n\n"
@@ -326,7 +355,8 @@ $li "$st $hara Downloading Mx_Player....\n\n"
 sleep 1
 $li "$st Please wait downloading Mx_Player......\n"
 cd ~/Download-App
-wget https://github.com/rooted-cyber/upload-apk/raw/master/Mx_Player.apk
+wget https://github.com/rooted-cyber/upload-apk/raw/master/mx_player2.apk
+mv mx_player2.apk Mx_Player.apk
 cp -f Mx_Player.apk /sdcard/Download-App
 #cp -f Microg.apk /sdcard/Download-App
 $li "\n\n $hara [√] $pila Download successfull\n\n"
@@ -734,10 +764,15 @@ cd $PREFIX/bin
 if [ -e Download ];then
 echo
 else
+apt update
+apt upgrade
+apt install python
+pip install lolcat
 printf "\n\n \033[92m Shortcut command added....\n"
 echo "#!/data/data/com.termux/files/usr/bin/sh" >> $PREFIX/bin/Download
 echo "cd ~/Download-App" >> $PREFIX/bin/Download
 echo "bash Download.sh" >> $PREFIX/bin/Download
+chmod 777 $PREFIX/bin/Download
 clear
 printf "\n\n Now you can use this command :- Download\n"
 read
@@ -789,12 +824,42 @@ else
 termux-setup-storage
 mkdir Download-App
 fi
+chf () {
+	cd ~
+	if [ -e Download-App ];then
+	echo
+	else
+	mkdir Download-App
+	fi
+	}
+chi () {
+	chf
+	cd ~/Download-App
+	if [ -e update1.0 ];then
+	printf "\033[93m [√] Successfully connected internet !!\n"
+	rm -f update1.0
+	else
+	printf "\n\033[91m [×] You are not connected to internet !!!\n\n"
+	exit
+	fi
+	}
+	upd () {
+		cd ~/Download-App
+		printf "\n\033[92m Checking Tool Version.....\n\n"
+		wget https://raw.githubusercontent.com/rooted-cyber/Download-App/master/update1.0 > /dev/null 2>&1
+		if [ -e update1.0 ];then
+		printf "\033[93m[√] This tool is latest version\n\n"
+		rm -f update1.0
+		else
+		auto
+		fi
+		}
 menu () {
 lal="\033[91m"
 bulu="\033[94m"
-pila="\033[93m"
+pila="\033[96m"
 hara="\033[92m"
-ajib="\033[96m"
+ajib="\033[93m"
 pta="\033[95m"
 im="figlet"
 li="printf"
@@ -802,10 +867,20 @@ st="$bulu[+]"
 sp="echo"
 ra="toilet -f term -F gay"
 clear
+chf
 cd $HOME/Download-App > /dev/null 2>&1
 echo
 $im Downloading | $ra
+figlet Apps|lolcat
 echo
+echo "================================================="|lolcat --animate
+echo "		Auto Update feature"|lolcat
+echo "================================================="|lolcat --animate
+echo
+printf "\033[92m Checking internet.....\n"
+wget https://raw.githubusercontent.com/rooted-cyber/Download-App/master/update1.0 > /dev/null 2>&1
+chi
+upd
 $li "	$lal [ 1 ] $pila Mixplore 6.42 4
 	$lal [ 2 ] $pila Es File Manager pro 1.1.4.1
 	$lal [ 3 ] $pila Ogyoutube 12.10.60-3.5U
