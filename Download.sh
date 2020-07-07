@@ -285,7 +285,7 @@ $li "$st $hara Downloading Termux-Styling....\n\n"
 sleep 1
 $li "$st Please wait downloading Termux-Styling......\n"
 cd ~/Download-App
-wget https://github.com/rooted-cyber/upload-apk/raw/master/Termux-Styling.apk
+wget https://github.com/rooted-cyber/upload-apk/raw/master/Termux_Styling.apk
 cp -f Termux-Styling.apk /sdcard/Download-App
 $li "\n\n $hara [√] $pila Download successfull\n\n"
 sleep 1
