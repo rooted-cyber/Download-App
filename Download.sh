@@ -1,19 +1,20 @@
 imp () {
 	li="printf"
-	bulu="\033[94m"
+	bulu="\033[1;94m"
 	rang="toilet -f term -F gay"
-	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
+	printf "\n\n\033[1;96mm =======================================\n\n\033[1;92m        [+] \033[1;93m Thanx for using this. \n\n\033[1;96mm =======================================\n\n"|$rang
 	toilet -f mono12 -F metal Thanks
-	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
+	printf "\n\n\033[1;96mm =======================================\n\n\033[1;92m        [+] \033[1;93m Thanx for using this. \n\n\033[1;96mm =======================================\n\n"|$rang
 $li "$bulu Press enter to home\n"
 read
+cd ~/Download-App
 bash Download.sh
 }
 ex () {
 	rang="toilet -f term -F gay"
-	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
+	printf "\n\n\033[1;96mm =======================================\n\n\033[1;92m        [+] \033[1;93m Thanx for using this. \n\n\033[1;96mm =======================================\n\n"|$rang
 	toilet -f mono12 -F metal Thanks
-	printf "\n\n\033[96m =======================================\n\n\033[92m        [+] \033[93m Thanx for using this. \n\n\033[96m =======================================\n\n"|$rang
+	printf "\n\n\033[1;96mm =======================================\n\n\033[1;92m        [+] \033[1;93m Thanx for using this. \n\n\033[1;96mm =======================================\n\n"|$rang
 	exit
 	}
 	upd () {
@@ -31,12 +32,12 @@ ex () {
 		clear
 		toilet -f mono12 -F metal UPDATE
 		echo "======================================================="|lolcat
-		echo -e "		\033[91m Your Tool Older version !!"
+		echo -e "		\033[1;91m Your Tool Older version !!"
 		echo "======================================================="|lolcat
 		echo
 		cowsay -f moose UPDATE|lolcat
 		echo
-		echo -e -n "\033[92m	[√]\033[96m Update Download-App Tool ?\033[93m (\033[97mY/N\033[93m)  "
+		echo -e -n "\033[1;92m	[√]\033[1;96mm Update Download-App Tool ?\033[1;93m (\033[97mY/N\033[1;93m)  "
 		read f
 		case $f in
 		y|Y)upd ;;
@@ -47,12 +48,12 @@ ex () {
 	
 	Turbo () {
 	
-	lal="\033[91m"
-bulu="\033[94m"
-pila="\033[93m"
-hara="\033[92m"
-ajib="\033[96m"
-pta="\033[95m"
+	lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;93m"
+hara="\033[1;92m"
+ajib="\033[1;96mm"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
@@ -117,12 +118,12 @@ menu
 
 hotstar () {
 	
-	lal="\033[91m"
-bulu="\033[94m"
-pila="\033[93m"
-hara="\033[92m"
-ajib="\033[96m"
-pta="\033[95m"
+	lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;93m"
+hara="\033[1;92m"
+ajib="\033[1;96mm"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
@@ -188,12 +189,12 @@ menu
 
 hike () {
 	
-	lal="\033[91m"
-bulu="\033[94m"
-pila="\033[93m"
-hara="\033[92m"
-ajib="\033[96m"
-pta="\033[95m"
+	lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;93m"
+hara="\033[1;92m"
+ajib="\033[1;96mm"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
@@ -257,23 +258,23 @@ menu
 
 style () {
 	
-	lal="\033[91m"
-bulu="\033[94m"
-pila="\033[93m"
-hara="\033[92m"
-ajib="\033[96m"
-pta="\033[95m"
+	lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;93m"
+hara="\033[1;92m"
+ajib="\033[1;96mm"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
 sp="echo"
 ra="toilet -f term -F gay"
 clear
-$im Termux-Styling | $ra
+$im Termux_Styling | $ra
 $sp
 $li "$st $pila Checking Termux-Styling.....\n"
 cd /sdcard/Download-App
-if [ -e Termux-Styling.apk ];then
+if [ -e Termux_Styling.apk ];then
 sleep 1
 $li "\n $hara Already download \n\n"
 sleep 1
@@ -286,7 +287,7 @@ sleep 1
 $li "$st Please wait downloading Termux-Styling......\n"
 cd ~/Download-App
 wget https://github.com/rooted-cyber/upload-apk/raw/master/Termux_Styling.apk
-cp -f Termux-Styling.apk /sdcard/Download-App
+cp -f Termux_Styling.apk /sdcard/Download-App
 $li "\n\n $hara [√] $pila Download successfull\n\n"
 sleep 1
 $li "$st$pila Checking in sdcard.....\n\n"
@@ -295,7 +296,7 @@ sleep 1
 ls
 fi
 cd /sdcard/Download-App
-if [ -e Termux-Styling.apk ];then
+if [ -e Termux_Styling.apk ];then
 sleep 1
 $li "$st $hara Now Installing Termux-Styling.apk\n\n"
 sleep 1
@@ -322,17 +323,18 @@ imp
 $li "\n\n$bulu Press enter to home\n"
 read
 menu
+
 }
 
 
 mx () {
 	
-	lal="\033[91m"
-bulu="\033[94m"
-pila="\033[93m"
-hara="\033[92m"
-ajib="\033[96m"
-pta="\033[95m"
+	lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;93m"
+hara="\033[1;92m"
+ajib="\033[1;96mm"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
@@ -399,12 +401,12 @@ menu
 
 app_cloner () {
 	
-	lal="\033[91m"
-bulu="\033[94m"
-pila="\033[93m"
-hara="\033[92m"
-ajib="\033[96m"
-pta="\033[95m"
+	lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;93m"
+hara="\033[1;92m"
+ajib="\033[1;96mm"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
@@ -469,12 +471,12 @@ menu
 
 videoder () {
 	
-	lal="\033[91m"
-bulu="\033[94m"
-pila="\033[93m"
-hara="\033[92m"
-ajib="\033[96m"
-pta="\033[95m"
+	lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;93m"
+hara="\033[1;92m"
+ajib="\033[1;96mm"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
@@ -540,12 +542,12 @@ menu
 
 og () {
 	
-	lal="\033[91m"
-bulu="\033[94m"
-pila="\033[93m"
-hara="\033[92m"
-ajib="\033[96m"
-pta="\033[95m"
+	lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;93m"
+hara="\033[1;92m"
+ajib="\033[1;96mm"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
@@ -624,12 +626,12 @@ menu
 
 es () {
 	
-	lal="\033[91m"
-bulu="\033[94m"
-pila="\033[93m"
-hara="\033[92m"
-ajib="\033[96m"
-pta="\033[95m"
+	lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;93m"
+hara="\033[1;92m"
+ajib="\033[1;96mm"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
@@ -690,16 +692,20 @@ $li "\n\n$bulu Press enter to home\n"
 read
 menu
 }
+ai() {
+	printf "\n\033[1;92m Ai.type keyboard link \n\n"
+	printf "\033[0m https://play.google.com/store/apps/details?id=com.aitype.android.f\n"
+	}
 
 
 mix () {
 	
-	lal="\033[91m"
-bulu="\033[94m"
-pila="\033[93m"
-hara="\033[92m"
-ajib="\033[96m"
-pta="\033[95m"
+	lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;93m"
+hara="\033[1;92m"
+ajib="\033[1;96mm"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
@@ -767,8 +773,7 @@ else
 apt update
 apt upgrade
 apt install python
-pip install lolcat
-printf "\n\n \033[92m Shortcut command added....\n"
+printf "\n\n \033[1;92m Shortcut command added....\n"
 echo "#!/data/data/com.termux/files/usr/bin/sh" >> $PREFIX/bin/Download
 echo "cd ~/Download-App" >> $PREFIX/bin/Download
 echo "bash Download.sh" >> $PREFIX/bin/Download
@@ -783,39 +788,39 @@ if [ -e figlet ];then
 echo
 else
 clear
-printf "\033[91m\n\n [×] Figlet not found\n\n"
-printf "\033[92m [+] Installing Figlet....\n\n"
+printf "\033[1;91m\n\n [×] Figlet not found\n\n"
+printf "\033[1;92m [+] Installing Figlet....\n\n"
 sleep 0.40
 pkg install figlet
 sleep 0.60
 clear
-printf "\033[96m [√] Successfully installed Figlet\n\n"
+printf "\033[1;96mm [√] Successfully installed Figlet\n\n"
 fi
 cd $PREFIX/bin
 if [ -e toilet ];then
 echo
 else
 clear
-printf "\033[91m\n\n [×] toilet not found\n\n"
-printf "\033[92m [+] Installing toilet....\n\n"
+printf "\033[1;91m\n\n [×] toilet not found\n\n"
+printf "\033[1;92m [+] Installing toilet....\n\n"
 sleep 0.40
 pkg install toilet
 sleep 0.60
 clear
-printf "\033[96m [√] Successfully installed toilet\n\n"
+printf "\033[1;96mm [√] Successfully installed toilet\n\n"
 fi
 cd $PREFIX/bin
 if [ -e wget ];then
 echo
 else
 clear
-printf "\033[91m\n\n [×] wget not found\n\n"
-printf "\033[92m [+] Installing wget....\n\n"
+printf "\033[1;91m\n\n [×] wget not found\n\n"
+printf "\033[1;92m [+] Installing wget....\n\n"
 sleep 0.40
 pkg install wget
 sleep 0.60
 clear
-printf "\033[96m [√] Successfully installed wget\n\n"
+printf "\033[1;96mm [√] Successfully installed wget\n\n"
 fi
 cd /sdcard
 if [ -e Download-App ];then
@@ -835,32 +840,32 @@ chf () {
 chi () {
 	chf
 	cd ~/Download-App
-	if [ -e update1.0 ];then
-	printf "\033[93m [√] Successfully connected internet !!\n"
-	rm -f update1.0
+	if [ -e update2.0 ];then
+	printf "\033[1;93m [√] Successfully connected internet !!\n"
+	rm -f update2.0
 	else
-	printf "\n\033[91m [×] You are not connected to internet !!!\n\n"
+	printf "\n\033[1;91m [×] You are not connected to internet !!!\n\n"
 	exit
 	fi
 	}
 	upd () {
 		cd ~/Download-App
-		printf "\n\033[92m Checking Tool Version.....\n\n"
-		wget https://raw.githubusercontent.com/rooted-cyber/Download-App/master/update1.0 > /dev/null 2>&1
-		if [ -e update1.0 ];then
-		printf "\033[93m[√] This tool is latest version\n\n"
-		rm -f update1.0
+		printf "\n\033[1;92m Checking Tool Version.....\n\n"
+		wget https://raw.githubusercontent.com/rooted-cyber/Download-App/master/update2.0 > /dev/null 2>&1
+		if [ -e update2.0 ];then
+		printf "\033[1;93m[√] This tool is latest version\n\n"
+		rm -f update2.0
 		else
 		auto
 		fi
 		}
 menu () {
-lal="\033[91m"
-bulu="\033[94m"
-pila="\033[96m"
-hara="\033[92m"
-ajib="\033[93m"
-pta="\033[95m"
+lal="\033[1;91m"
+bulu="\033[1;94m"
+pila="\033[1;96mm"
+hara="\033[1;92m"
+ajib="\033[1;93m"
+pta="\033[1;95m"
 im="figlet"
 li="printf"
 st="$bulu[+]"
@@ -871,30 +876,29 @@ chf
 cd $HOME/Download-App > /dev/null 2>&1
 echo
 $im Downloading | $ra
-figlet Apps|lolcat
+figlet Apps
 echo
-echo "================================================="|lolcat --animate
-echo "		Auto Update feature"|lolcat
-echo "================================================="|lolcat --animate
+echo "================================================="|lolcat
+echo "		Auto Update feature"
+echo "================================================="|lolcat
 echo
-printf "\033[92m Checking internet.....\n"
+printf "\033[1;92m Checking internet.....\n"
 wget https://raw.githubusercontent.com/rooted-cyber/Download-App/master/update1.0 > /dev/null 2>&1
 chi
+printf "\n\033[1;91m[\033[0m1\033[1;91m]\033[1;92m Mixplore 6.42 4"
+printf "\n\033[1;91m[\033[0m2\033[1;91m]\033[1;92m Es File Manager pro 1.1.4.1"
+printf "\n\033[1;91m[\033[0m3\033[1;91m]\033[1;92m Ogyoutube 12.10.60-3.5U"
+printf "\n\033[1;91m[\033[0m4\033[1;91m]\033[1;92m Videoder (Hotstar video download)"
+printf "\n\033[1;91m[\033[0m5\033[1;91m]\033[1;92m App cloner pro 1.5.32"
+printf "\n\033[1;91m[\033[0m6\033[1;91m]\033[1;92m Mx player pro 1.14.5"
+printf "\n\033[1;91m[\033[0m7\033[1;91m]\033[1;92m Termux Styling 0.25"
+printf "\n\033[1;91m[\033[0m8\033[1;91m]\033[1;92m Hike Vk 4.1.0"
+printf "\n\033[1;91m[\033[0m9\033[1;91m]\033[1;92m ai.type keyboard"
+printf "\n\033[1;91m[\033[0m10\033[1;91m]\033[1;92m Turbo ( sms bomber )"
+printf "\n\033[1;91m[\033[0m11\033[1;91m]\033[1;92m Exit\n\n\n"
 upd
-$li "	$lal [ 1 ] $pila Mixplore 6.42 4
-	$lal [ 2 ] $pila Es File Manager pro 1.1.4.1
-	$lal [ 3 ] $pila Ogyoutube 12.10.60-3.5U
-	$lal [ 4 ] $pila Videoder (Hotstar video download)
-	$lal [ 5 ] $pila App cloner pro 1.5.32
-	$lal [ 6 ] $pila Mx player pro 1.14.5
-	$lal [ 7 ] $pila Termux Styling 0.25
-	$lal [ 8 ] $pila Hike Vk 4.1.0
-	$lal [ 9 ] $pila Hotstar premium
-	$lal [ 10 ]$pila Turbo ( sms bomber )
-	$lal [ 11 ]$pila Exit
-	
-$st $ajib Select >> "
-	read a
+echo -e -n "\033[1;1;96mDownload\033[0m -->> "
+read a
 	case $a in
 	1)mix ;;
 	2)es ;;
@@ -904,10 +908,10 @@ $st $ajib Select >> "
 	6)mx ;;
 	7)style ;;
 	8)hike ;;
-	9)hotstar ;;
+	9)ai;;
 	10)Turbo ;;
 	11)ex ;;
-	*)bash Download.sh ;;
+	*)menu ;;
 	esac
 	}
 	menu
