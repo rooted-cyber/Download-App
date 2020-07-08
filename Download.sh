@@ -840,15 +840,15 @@ chf () {
 chi () {
 	chf
 	cd ~/Download-App
-	if [ -e update2.0 ];then
+	if [ -e net.txt ];then
 	printf "\033[1;93m [√] Successfully connected internet !!\n"
-	rm -f update2.0
+	rm -f net.txt
 	else
 	printf "\n\033[1;91m [×] You are not connected to internet !!!\n\n"
 	exit
 	fi
 	}
-	upd () {
+	update () {
 		cd ~/Download-App
 		printf "\n\033[1;92m Checking Tool Version.....\n\n"
 		wget https://raw.githubusercontent.com/rooted-cyber/Download-App/master/update2.0 > /dev/null 2>&1
@@ -883,7 +883,7 @@ echo "		Auto Update feature"
 echo "================================================="|lolcat
 echo
 printf "\033[1;92m Checking internet.....\n"
-wget https://raw.githubusercontent.com/rooted-cyber/Download-App/master/update1.0 > /dev/null 2>&1
+wget https://raw.githubusercontent.com/rooted-cyber/Download-App/master/net.txt > /dev/null 2>&1
 chi
 printf "\n\033[1;91m[\033[0m1\033[1;91m]\033[1;92m Mixplore 6.42 4"
 printf "\n\033[1;91m[\033[0m2\033[1;91m]\033[1;92m Es File Manager pro 1.1.4.1"
@@ -896,7 +896,7 @@ printf "\n\033[1;91m[\033[0m8\033[1;91m]\033[1;92m Hike Vk 4.1.0"
 printf "\n\033[1;91m[\033[0m9\033[1;91m]\033[1;92m ai.type keyboard"
 printf "\n\033[1;91m[\033[0m10\033[1;91m]\033[1;92m Turbo ( sms bomber )"
 printf "\n\033[1;91m[\033[0m11\033[1;91m]\033[1;92m Exit\n\n\n"
-upd
+update
 echo -e -n "\033[1;1;96mDownload\033[0m -->> "
 read a
 	case $a in
